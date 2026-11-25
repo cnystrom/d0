@@ -8,12 +8,10 @@ TARGET1 =	$(FILENAME1).a
 
 HEADERS1 = 	\
 		$(FILENAME1).h \
-		SDL_prim.h \
 		$(NULL)
 
 CCFILES1 =	\
 		$(FILENAME1).c \
-		SDL_prim.c \
 		$(NULL)
 
 OBJS1 =		${CCFILES1:.c=.o}

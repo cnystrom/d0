@@ -1,5 +1,5 @@
 
-TARGETS =	$(TARGET1)
+TARGETS =
 
 #==============================================================================
 
@@ -11,8 +11,6 @@ HEADERS1 = 	\
 		$(NULL)
 
 CCFILES1 =	\
-		fonts.c \
-		text.c \
 		$(NULL)
 
 OBJS1 =		${CCFILES1:.c=.o}
@@ -41,7 +39,8 @@ LFLAGS =	$(LIBDIRS)
 %.o:		%.c
 		$(CC) -c $< $(CFLAGS) -o $@
 
-all: 		$(TARGETS)
+all:
+		@echo "font_lib sources (fonts.c, text.c) were third-party and were omitted; nothing left to build here."
 
 default:	$(TARGETS)
 
@@ -50,8 +49,7 @@ new:		clean default
 #==============================================================================
 
 $(TARGET1):	$(OBJS1) $(HEADERS1) $(LIBS1)
-		ar rcs $(TARGET1) $(LIBS1) $(OBJS1)
-		ranlib $(TARGET1)
+		@echo "font_lib sources (fonts.c, text.c) were third-party and were omitted; nothing left to build here."
 
 indent:
 		indent -kr -i8 *.h *.c 

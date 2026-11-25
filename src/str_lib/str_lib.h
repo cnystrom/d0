@@ -45,7 +45,7 @@
 
 PUBLIC void strclean(char *s);
 
-// From OpenBSD 
+// New original implementations (2026) replace omitted third-party sources.
 
 PUBLIC size_t strlcpy(char *dst, const char *src, size_t siz);
 PUBLIC size_t strlcat(char *dst, const char *src, size_t siz);
