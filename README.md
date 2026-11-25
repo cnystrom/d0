@@ -30,6 +30,8 @@ Most of Chris's files use the GNU LGPL 2.1 (see `header.lgpl`) or the
 GNU GPL 2 (`header.gpl`). Read the header of each file. `movie_demo.c`
 is marked public domain by Chris.
 
+The GNU LGPL 2.1 (or later) text is in LICENSE; the GNU GPL 2 (or later) text is in COPYING. A few files are public domain, as marked in their headers.
+
 ## Third-party files removed
 
 These were in the original tree and were omitted because they were not
