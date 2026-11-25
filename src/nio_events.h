@@ -1,0 +1,3 @@
+
+#define NIO_EVENT_RESIZE (1)
+#define NIO_EVENT_MOUSE_CURSOR (2)

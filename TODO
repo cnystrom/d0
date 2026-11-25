@@ -1,0 +1,31 @@
+
+               d0 - application browser
+               ------------------------
+
+Bugs:
+----
+term_lib scroll 
+draw_rectangle alpha not working
+
+Security
+--------
+built in ssl
+
+Feature Requests:
+----------------
+
+Command to clear file cache
+
+Add draw_triangle
+Add draw_polygon (?)
+
+Make versions for other OS (Windows, MacOS X, etc)
+- need openpty() for Solaris
+- need fork(), ssh for W32
+
+Use OpenGL for rendering?
+Use cairo for rendering?
+
+Internationalize
+
+

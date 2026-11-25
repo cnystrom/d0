@@ -1,0 +1,26 @@
+
+You can run this program from the build directory, but if you would like to
+install it:
+
+--------------
+
+cd src
+make
+
+cd ..
+./install.sh
+
+----- OR -----
+
+cd  src
+make
+
+cd ..
+su root
+./install-root.sh
+
+--------------
+
+The install scripts are very simple so take a minute to read them before you
+run them.
+

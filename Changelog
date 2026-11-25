@@ -1,0 +1,19 @@
+
+5/16/05  - Fixed port field in URL - ccn
+5/16/05  - Enable Key Repeating - ccn
+5/29/05  - Broke up main.c into several smaller files (build 026 - ccn)
+6/8/05   - Added Fastevent and Net2 libraries (build 030)
+6/24/05  - Using UDP instead of TCP (build 027H)
+7/4/05   - Dropped UDP and Fastevent and Net2 libraries. UDP did not help enough.
+7/19/05  - Integrated messaging model into code base (build 032).
+8/28/05  - Fixed update_screen() bug (build 033).
+8/31/05  - Cahnged API to better control screen paints. Animation now possible. Upped version to 0.07 since compatibiliy broken (build 035).
+9/12/05  - Started adding video support using SMPEG library (build 038)
+9/17/05  - Fixed color bug in rectangle drawing routine (build 039).
+9/26/05  - Various bug fixes and cleanup in preperation for first public release (build 043).
+10/05/05 - Moved source code to src directory. Cleaned up build system (Makefiles). Got rid of misc_lib. (build 044)
+10/07/05 - Fixed bug in play_sound(). Fixed install dir to $HOME/.d0 (build 045)
+10/07/05 - Created primitive version checker. Dreadnought will now advise you if you need to upgrade. (Version 0.08, build 046)
+03/21/06 - Removed SMPEG dependency (Version 0.09, build 54)
+03/29/06 - Fixed bug in terminal code having to to with CR (Ascii 13) (version 0.09, build 53b)
+04/14/06 - replaced unix specific pthreads with portable SDL threads in preparation for a windows port (version 0.09, build 55)
