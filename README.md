@@ -19,6 +19,10 @@ GNU FreeFont files and a `.wav`, which were not kept).
 
 Years in the headers are typically 2002 and 2005.
 
+## Pages
+
+Chris's old programs page is at https://nystrom.family/chris/old/programs.html.
+
 ## License
 
 Most of Chris's files use the GNU LGPL 2.1 (see `header.lgpl`) or the
