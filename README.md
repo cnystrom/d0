@@ -19,6 +19,11 @@ GNU FreeFont files and a `.wav`, which were not kept).
 
 Years in the headers are typically 2002 and 2005.
 
+This snapshot is d0 0.09 (14 Apr 2006), the historical predecessor of
+the later d0 client in NewIO 0.12. This tree is kept as history and is
+not being ported separately. For the later client, see
+https://github.com/cnystrom/newio
+
 ## Pages
 
 Chris's old programs page is at https://nystrom.family/chris/old/programs.html.
@@ -55,8 +60,20 @@ Compiled objects, the `d0` binary, and media (fonts, `newio.wav`,
 
 ## Build
 
-The project expects SDL, SDL_ttf, SDL_image, SDL_mixer, and `sdl-config`.
-`make` in `src/` failed here on a missing `sdl-config` and then on
-`SDL.h`. No source was modified. After the third-party removals, the
-bundled Makefiles that still name the omitted files will also need
-attention if you rebuild this historically.
+The project expects SDL 1.2, SDL_ttf, SDL_image, and SDL_mixer.
+`sdl-config` is fine on a current Linux system; that is no longer the
+blocker. `make` in `src/` still does not build the application. The
+real blockers are:
+
+- missing `SDL_prim.h` (removed with Ryan McGuigan's primitives; see above)
+- missing `font_lib` sources (the Bob Pendleton-derived files were removed)
+- `movie_lib` includes `smpeg/smpeg.h`, which is not in this tree
+- `basename` in `file_io_lib.h` clashes with glibc when `_GNU_SOURCE` is
+  set (SDL flags can do that)
+
+Some helper libraries under `src/` (audio, color, event, image, and sdl)
+can still be built. The bundled Makefiles were updated so they no longer
+name the omitted `strlcpy`/`strlcat` and `SDL_prim` sources, and a new
+original `strlcpy`/`strlcat` (2026) was added under `src/str_lib/`. This
+tree is not being ported separately; use NewIO's later d0 for the current
+client.
